@@ -1,0 +1,21 @@
+<%= form_for @song , url: {action: "create"} do |song|  %>
+	<%= song.hidden_field :user_id %>
+	<p>
+		<%= song.label :title %>
+		<%= song.text_field :title %>
+	</p>
+	<p>
+		<%= song.label :artist %>
+		<%= song.text_field :artist %>
+	</p>
+	<p>
+		<%= song.label :album %>
+		<%= song.text_field :album %>
+	</p>
+	<p>
+		<%= song.file_field :musicfile %>
+	</p>
+	<p> 
+		<%= song.submit  "Upload" %>		
+	</p>
+<% end %>
