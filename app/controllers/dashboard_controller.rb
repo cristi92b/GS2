@@ -10,13 +10,9 @@ class DashboardController < ApplicationController
   end
   def create
 	@song=Song.new(params[:song])
-	#@song = Song.new({:id => "#{params[:song][:id]}",:artist => "#{params[:song][:artist]}",:album => "#{params[:song][:album]}",:musicfile => "string"})
-	p params[:song]
 	@song.save
 	uploader = MusicfileUploader.new
 	uploader.store!(params[:song][:musicfile])
-	#puts uploader
-	#puts @song
 	#redirect_to dashboard_index_path
   end
   def edit
