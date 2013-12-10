@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
-  
+  before_filter :authenticate_user!  
+
   def index
 	@songs = Song.all
   end
@@ -12,6 +13,7 @@ class DashboardController < ApplicationController
   def create
 	#@song=Song.new(params[:song])
 	@song=Song.new(create_params)
+	#@song.user_id=current_user.id
 	if(@song.save && params[:song][:musicfile] != nil)
 		uploader = MusicfileUploader.new
 		redirect_to dashboard_index_path
@@ -36,6 +38,6 @@ class DashboardController < ApplicationController
   end
   private
   def create_params
-        params.require(:song).permit(:title,:artist,:album,:misicfile)
+        params.require(:song).permit(:title,:artist,:album,:musicfile,:user_id)
   end
 end

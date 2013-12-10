@@ -1,5 +1,5 @@
 <%= form_for @song , url: {action: "create"} do |song|  %>
-	<%= song.hidden_field :user_id %>
+	<%= song.hidden_field :user_id ,:user_id => current_user.id %>
 	<p>
 		<%= song.label :title %>
 		<%= song.text_field :title %>

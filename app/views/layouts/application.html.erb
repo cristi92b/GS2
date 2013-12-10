@@ -13,8 +13,13 @@
         <ul>
                 <li> <%=link_to "Home", root_path %> </li>
                 <li> <%= link_to "Dashboard", dashboard_index_path %></li>
-                <li> <%= link_to "Sign in", new_user_registration_path  %></li>
-                <li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+		<% if(user_signed_in?) %>
+			<li> Welcome, <%= current_user.email  %></li>
+			<li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+		<% else %>
+                	<li> <%= link_to "Sign in", new_user_registration_path  %></li>
+		<% end %>
+
         </ul>
 </div>
         
