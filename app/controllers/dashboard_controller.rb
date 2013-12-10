@@ -1,4 +1,5 @@
 class DashboardController < ApplicationController
+  
   def index
 	@songs = Song.all
   end
@@ -9,13 +10,14 @@ class DashboardController < ApplicationController
 
   end
   def create
-	@song=Song.new(params[:song])
+	#@song=Song.new(params[:song])
+	@song=Song.new(create_params)
 	if(@song.save && params[:song][:musicfile] != nil)
 		uploader = MusicfileUploader.new
 		redirect_to dashboard_index_path
 		uploader.store!(params[:song][:musicfile])
 	else
-		puts "error"
+		redirect_to new_dashboard_path
 	end
 	#uploader = MusicfileUploader.new
 	#uploader.store!(params[:song][:musicfile])
@@ -31,5 +33,9 @@ class DashboardController < ApplicationController
 		@song.destroy
 	end
 	redirect_to dashboard_index_path
+  end
+  private
+  def create_params
+        params.require(:song).permit(:title,:artist,:album,:misicfile)
   end
 end

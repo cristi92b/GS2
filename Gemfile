@@ -56,4 +56,6 @@ gem 'devise'
 # Pentru bara de sus (login)
 gem 'bootstrap-sass'
 
-gem 'protected_attributes'
+#gem 'strong_parameters'
+
+#gem 'protected_attributes'
