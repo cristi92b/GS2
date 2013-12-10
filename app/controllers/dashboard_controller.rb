@@ -15,8 +15,9 @@ class DashboardController < ApplicationController
 	@song.user_id=current_user.id #should not be sent from view
 	if(@song.save && params[:song][:musicfile] != nil)
 		uploader = MusicfileUploader.new
-		redirect_to dashboard_index_path
+        	uploader.set_userid(current_user.id)
 		uploader.store!(params[:song][:musicfile])
+		redirect_to dashboard_index_path
 	else
 		redirect_to new_dashboard_path
 	end
