@@ -8,12 +8,11 @@ class DashboardController < ApplicationController
   end
   def new
 	@song = Song.new
-
   end
   def create
 	#@song=Song.new(params[:song])
 	@song=Song.new(create_params)
-	#@song.user_id=current_user.id
+	@song.user_id=current_user.id #should not be sent from view
 	if(@song.save && params[:song][:musicfile] != nil)
 		uploader = MusicfileUploader.new
 		redirect_to dashboard_index_path
@@ -36,8 +35,10 @@ class DashboardController < ApplicationController
 	end
 	redirect_to dashboard_index_path
   end
+
+
   private
   def create_params
-        params.require(:song).permit(:title,:artist,:album,:musicfile,:user_id)
+        params.require(:song).permit(:title,:artist,:album,:musicfile)
   end
 end
