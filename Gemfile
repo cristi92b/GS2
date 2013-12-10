@@ -56,6 +56,8 @@ gem 'devise'
 # Pentru bara de sus (login)
 gem 'bootstrap-sass'
 
+gem 'taglib-ruby'
+
 #gem 'strong_parameters'
 
 #gem 'protected_attributes'
