@@ -1,5 +1,5 @@
 # encoding: utf-8
-require 'devise'
+
 class MusicfileUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
@@ -12,6 +12,21 @@ class MusicfileUploader < CarrierWave::Uploader::Base
   storage :file
   # storage :fog
 
+	
+  #overriding filename and url - always overload them together
+  def filename
+	"#{model.id}.mp3"
+  end
+  def url
+    "/#{store_dir}/#{model.id}.mp3"
+  end
+  #def filename
+  #  if original_filename.present?
+  #    "#{secure_token}.#{file.path.split('.').last.downcase}"
+  #  else
+  #    super
+  #  end
+  #end
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   #def cache_dir
@@ -19,7 +34,7 @@ class MusicfileUploader < CarrierWave::Uploader::Base
   #end
   def store_dir
   	#"#{Rails.root}/uploads/#{@userid}/"
-	"#{Rails.root}/uploads/#{model.user_id}"
+    "#{Rails.root}/uploads/#{model.user_id}"
     #"uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{Song.id}"
   end
 
