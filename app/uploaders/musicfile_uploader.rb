@@ -1,21 +1,25 @@
 # encoding: utf-8
-
+require 'devise'
 class MusicfileUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-  def set_userid(userid)
-  	@userid=userid
-  end
+  #def set_userid(userid)
+  #	@userid=userid
+  #end
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
+  #def cache_dir
+  #	"#{Rails.root}/uploads/tmp"
+  #end
   def store_dir
-    "#{Rails.root}/uploads/#{@userid}/"
+  	#"#{Rails.root}/uploads/#{@userid}/"
+	"#{Rails.root}/uploads/#{model.user_id}"
     #"uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{Song.id}"
   end
 

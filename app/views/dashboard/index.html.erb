@@ -8,4 +8,39 @@
 
 <%= link_to "New" ,  new_dashboard_path %>
 
+<hr>
+
+<table border="1">
+	<tr>
+		<td>
+			title
+		</td>
+		<td>
+			album
+		</td>
+		<td>
+			artist
+		</td>
+		<td>
+			musicfile
+		</td>
+	</tr>
+<% @songs.each do |song| %>
+	<tr>
+		<td>
+			<%= song.title %>
+		</td>
+		<td>
+			<%= song.album %>
+		</td>
+		<td>
+			<%= song.artist %>
+		</td>
+		<td>
+			<%= song.musicfile %>
+		</td>
+	</tr>
+<% end %>
+</table>
+
 

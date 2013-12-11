@@ -1,3 +1,5 @@
+require 'taglib'
+
 class DashboardController < ApplicationController
   before_filter :authenticate_user!  
 
@@ -13,10 +15,20 @@ class DashboardController < ApplicationController
 	#@song=Song.new(params[:song])
 	@song=Song.new(create_params)
 	@song.user_id=current_user.id #should not be sent from view
-	if(@song.save && params[:song][:musicfile] != nil)
-		uploader = MusicfileUploader.new
-        	uploader.set_userid(current_user.id)
+	if(params[:song][:musicfile] != nil)
+		uploader = MusicfileUploader.new(@song,:musicfile)
+        	#uploader.set_userid(current_user.id)
 		uploader.store!(params[:song][:musicfile])
+		@song.save
+		TagLib::MPEG::File.open(uploader.url) do |file| #sau @song.musicfile - nu merge deloc, uploader.url merge doar dupa ce fisierul a fost salvat
+    			tag = file.id3v2_tag
+			@song.title = tag.title
+			@song.artist = tag.artist
+			@song.album = tag.album
+		end
+		#@song.save
+		#uploader.store!(params[:song][:musicfile])
+
 		redirect_to dashboard_index_path
 	else
 		redirect_to new_dashboard_path
