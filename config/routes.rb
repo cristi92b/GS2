@@ -7,7 +7,7 @@ GS::Application.routes.draw do
   resources :dashboard
   resources :home
   resources :about
-  resources :search
+  resources :searchbar
 
   devise_for :users
   
