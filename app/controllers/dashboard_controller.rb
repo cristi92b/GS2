@@ -19,7 +19,7 @@ class DashboardController < ApplicationController
 		uploader = MusicfileUploader.new(@song,:musicfile)
         	#uploader.set_userid(current_user.id)
 		uploader.store!(params[:song][:musicfile])
-		@song.save
+		
 		TagLib::MPEG::File.open(uploader.url) do |file| #sau @song.musicfile - nu merge deloc, uploader.url merge doar dupa ce fisierul a fost salvat
     			tag = file.id3v2_tag
 			@song.title = tag.title
@@ -28,7 +28,7 @@ class DashboardController < ApplicationController
 		end
 		#@song.save
 		#uploader.store!(params[:song][:musicfile])
-
+		@song.save
 		redirect_to dashboard_index_path
 	else
 		redirect_to new_dashboard_path

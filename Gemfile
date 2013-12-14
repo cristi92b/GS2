@@ -61,3 +61,5 @@ gem 'taglib-ruby'
 #gem 'strong_parameters'
 
 #gem 'protected_attributes'
+
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
