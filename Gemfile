@@ -63,3 +63,5 @@ gem 'taglib-ruby'
 #gem 'protected_attributes'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
+
+gem "mediaelement_rails"
