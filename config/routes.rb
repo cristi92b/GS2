@@ -1,10 +1,13 @@
 GS::Application.routes.draw do
 
+  get "about/index"
   get "dashboard/download"  
   get 'dashboard/find' => 'dashboard#find'
-
+  get 'home/find' => 'home#find'
+  
   resources :dashboard
   resources :home
+  resources :about
   devise_for :users
   
   root "home#index"
