@@ -24,7 +24,19 @@
 			artist
 		</td>
 		<td>
-			musicfile
+			genre
+		</td>
+		<td>
+			track
+		</td>
+		<td>
+			year
+		</td>
+		<td>
+			Edit
+		</td>
+		<td>
+			Play
 		</td>
 	</tr>
 <% @songs.each do |song| %>
@@ -39,7 +51,19 @@
 			<%= song.artist %>
 		</td>
 		<td>
-			<%= song.musicfile %>
+			<%= song.genre %>
+		</td>
+		<td>
+			<%= song.track %>
+		</td>
+		<td>
+			<%= song.year %>
+		</td>
+		<td>
+			<%= link_to "Edit", edit_dashboard_path(song.id) %>
+		</td>
+		<td>
+			<%= link_to "Play", dashboard_path(song.id) %>
 		</td>
 	</tr>
 <% end %>

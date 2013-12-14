@@ -25,6 +25,9 @@ class DashboardController < ApplicationController
 			@song.title = tag.title
 			@song.artist = tag.artist
 			@song.album = tag.album
+			@song.genre = tag.genre
+			@song.year = tag.year
+			@song.track = tag.track
 		end
 		#@song.save
 		#uploader.store!(params[:song][:musicfile])
@@ -38,6 +41,7 @@ class DashboardController < ApplicationController
 	#redirect_to dashboard_index_path
   end
   def edit
+	
   end
   def update
   end
@@ -52,6 +56,6 @@ class DashboardController < ApplicationController
 
   private
   def create_params
-        params.require(:song).permit(:title,:artist,:album,:musicfile)
+        params.require(:song).permit(:title,:artist,:album,:year,:track,:genre,:musicfile)
   end
 end
