@@ -5,14 +5,20 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <script>
+        $( document ).ready(function() {
+                $('input[type="submit"]').addClass('btn btn-success');
+        });
+  </script>
 </head>
 <body style="margin-top: 50px">
 
 
 
 
-<nav class="navbar navbar-default" role="navigation">
+<<nav class="navbar navbar-default" role="navigation" style="width:100%;">
   <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="meniu" style="width:980px;margin:0 auto;">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
       <span class="sr-only">Toggle navigation</span>
@@ -42,11 +48,13 @@
       <li><a href="#">Sign in</a></li>
     </ul>
   </div><!-- /.navbar-collapse -->
+    </div>
 </nav>
      
 
 
-<div>
+<div style="width:100%">
+        <div style="width:980px;margin:0 auto;"> 
         <ul>
                 <li> <%=link_to "Home", root_path %> </li>
                 <li> <%= link_to "Dashboard", dashboard_index_path %></li>
@@ -58,9 +66,11 @@
 		<% end %>
 
         </ul>
+        <%= yield %>
+</div>
 </div>
         
-<%= yield %>
+
 
 </body>
 </html>
