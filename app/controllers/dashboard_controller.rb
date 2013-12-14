@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
   before_filter :authenticate_user!  
 
   def index
-	@songs = Song.all
+	@songs = Song.where(user_id: current_user.id)
   end
   def show
   end
