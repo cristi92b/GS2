@@ -35,7 +35,7 @@
       <li class="active"><%= link_to "Home" ,home_index_path %></li>
       <li><%= link_to "Dashboard" ,dashboard_index_path %></li>
     </ul>
-      <%= form_tag({controller: "searchbar", action: "index"}, method: "get", class: "navbar-form navbar-left") %>
+      <%= form_tag({controller: "/searchbar", action: "index"}, method: "get", class: "navbar-form navbar-left") %>
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search">
       </div>
