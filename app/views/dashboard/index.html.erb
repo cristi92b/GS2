@@ -73,7 +73,7 @@
 		</td>
 
 		<td>
-			
+			<%= link_to "Download", "/dashboard/download?id=#{song.id}" %>
 		</td>
 		<td>
 			<%= link_to "Destroy", dashboard_path(song.id) , :method => :delete  %>

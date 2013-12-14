@@ -57,11 +57,20 @@ class DashboardController < ApplicationController
 	end
 	redirect_to dashboard_index_path
   end
+  
+  def download
+	  @song = Song.find(params[:id])
+	  #uploader = MusicUploader.new(@song,:musicfile)
+	  
 
-  def get_url(id)
-  	@song=Song.find(id).musicfile
-	#redirect_to dashboard_index_path
+	  #send_file uploader.file.path
+
+	  send_file( @song.musicfile.to_s ,
+	  :disposition => 'inline',
+	  #:type => 'audio/mp3',
+	  :x_sendfile => true )
   end
+
 
 
   private
