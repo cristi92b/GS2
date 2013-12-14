@@ -3,6 +3,8 @@ require 'taglib'
 class DashboardController < ApplicationController
   before_filter :authenticate_user!  
 
+  @word
+
   def index
 	@songs = Song.where(user_id: current_user.id)
   end
@@ -71,7 +73,13 @@ class DashboardController < ApplicationController
 	  :x_sendfile => true )
   end
 
-
+  def find
+  	if params[:word].present?
+  	  @songs = Song.where("title like ?", "%#{params[:word]}%").where(:user_id => current_user.id)
+  	else
+  	  @songs = Song.where(:user_id => current_user.id)
+    end
+  end
 
   private
   def create_params

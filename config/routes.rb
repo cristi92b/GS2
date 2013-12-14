@@ -1,6 +1,7 @@
 GS::Application.routes.draw do
 
   get "dashboard/download"  
+  get 'dashboard/find' => 'dashboard#find'
 
   resources :dashboard
   resources :home
