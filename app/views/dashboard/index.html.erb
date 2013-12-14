@@ -38,6 +38,12 @@
 		<td>
 			Play
 		</td>
+		<td>
+			Download
+		</td>
+		<td>
+			Remove
+		</td>
 	</tr>
 <% @songs.each do |song| %>
 	<tr>
@@ -64,6 +70,13 @@
 		</td>
 		<td>
 			<%= link_to "Play", dashboard_path(song.id) %>
+		</td>
+
+		<td>
+			
+		</td>
+		<td>
+			<%= link_to "Destroy", dashboard_path(song.id) , :method => :delete  %>
 		</td>
 	</tr>
 <% end %>

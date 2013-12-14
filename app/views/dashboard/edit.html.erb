@@ -1,0 +1,30 @@
+<%= form_for @song2 , url: {action: "update"} do |song|  %>
+	<p>
+		<%= song.label :title %>
+		<%= song.text_field :title %>
+	</p>
+	<p>
+		<%= song.label :artist %>
+		<%= song.text_field :artist %>
+	</p>
+	<p>
+		<%= song.label :album %>
+		<%= song.text_field :album %>
+	</p>
+	<p>
+		<%= song.label :genre %>
+		<%= song.text_field :genre %>
+	</p>
+	<p>
+		<%= song.label :track %>
+		<%= song.text_field :track %>
+	</p>
+	<p>
+		<%= song.label :year %>
+		<%= song.text_field :year %>
+	</p>
+
+	<p> 
+		<%= song.submit  "Save" %>		
+	</p>
+<% end %>

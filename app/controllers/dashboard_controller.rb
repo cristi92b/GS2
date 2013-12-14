@@ -41,21 +41,34 @@ class DashboardController < ApplicationController
 	#redirect_to dashboard_index_path
   end
   def edit
-	
+	@song2 = Song.find(params[:id])
   end
   def update
+	@song2=Song.find(params[:id])
+	@song3=Song.new(update_params)
+	@song2.update({:title => @song3.title , :artist => @song3.artist , :album => @song3.album , :genre =>  @song3.genre , :track => @song3.track , :year =>  @song3.year })
+	@song2.save
+	redirect_to dashboard_index_path
   end
   def destroy
-	@song=Song.find(params[:song][:id])
+	@song=Song.find(params[:id])
 	if( @song.present? )
 		@song.destroy
 	end
 	redirect_to dashboard_index_path
   end
 
+  def get_url(id)
+  	@song=Song.find(id).musicfile
+	#redirect_to dashboard_index_path
+  end
+
 
   private
   def create_params
         params.require(:song).permit(:title,:artist,:album,:year,:track,:genre,:musicfile)
+  end
+  def update_params
+        params.require(:song).permit(:title,:artist,:album,:year,:track,:genre)
   end
 end
