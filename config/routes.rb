@@ -5,6 +5,8 @@ GS::Application.routes.draw do
 
   resources :dashboard
   resources :home
+  resources :about
+  resources :search
   devise_for :users
   
   root "home#index"
