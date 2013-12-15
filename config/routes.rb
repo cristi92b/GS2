@@ -1,5 +1,5 @@
 GS::Application.routes.draw do
-
+  post "searchbar/save_comm"
   get "dashboard/download"  
   get 'dashboard/find' => 'dashboard#find'
   get 'home/find' => 'home#find'

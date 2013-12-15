@@ -9857,3 +9857,3666 @@ Processing by SearchbarController#show as HTML
   [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "5"]]
   Rendered searchbar/show.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20131215140336)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "song_id" integer, "user_id" integer, "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131215140336"]]
+  [1m[36m (138.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mComment Load (5.1ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-15 16:14:40 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered home/index.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 245ms (Views: 232.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:41 +0200
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-15 16:14:44 +0200
+Processing by DashboardController#index as HTML
+Completed 401 Unauthorized in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-15 16:14:44 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.2.2/app/views/devise/shared/_links.erb (2.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.2.2/app/views/devise/sessions/new.html.erb within layouts/application (114.1ms)
+Completed 200 OK in 151ms (Views: 124.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-12-15 16:14:45 +0200
+Processing by HomeController#index as HTML
+  [1m[36mSong Load (0.4ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered home/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchbar" for 127.0.0.1 at 2013-12-15 16:14:47 +0200
+Processing by SearchbarController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hgz6Oxi7jfo1zXBvS9vniCRP6+8Z4VfY/IJ3r4w+F9M=", "searchstring"=>""}
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered searchbar/_create.html.erb (4.8ms)
+  Rendered searchbar/create.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:48 +0200
+
+
+Started GET "/dashboard/2" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.2.2/app/views/devise/shared/_links.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.2.2/app/views/devise/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:50 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:14:52 +0200
+
+
+Started GET "/dashboard/3" for 127.0.0.1 at 2013-12-15 16:14:54 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-15 16:14:54 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.2.2/app/views/devise/shared/_links.erb (0.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.2.2/app/views/devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-15 16:14:59 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hgz6Oxi7jfo1zXBvS9vniCRP6+8Z4VfY/IJ3r4w+F9M=", "user"=>{"email"=>"c@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'c@gmail.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (9.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["current_sign_in_at", Sun, 15 Dec 2013 14:14:59 UTC +00:00], ["sign_in_count", 2], ["updated_at", Sun, 15 Dec 2013 14:14:59 UTC +00:00]]
+  [1m[35m (147.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/dashboard/3
+Completed 302 Found in 333ms (ActiveRecord: 157.3ms)
+
+
+Started GET "/dashboard/3" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered dashboard/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:00 +0200
+
+
+Started GET "/dashboard/3" for 127.0.0.1 at 2013-12-15 16:15:02 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:15:03 +0200
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138)
+
+
+Started GET "/dashboard/3" for 127.0.0.1 at 2013-12-15 16:16:14 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered dashboard/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 283ms (Views: 180.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:16:15 +0200
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-15 16:16:16 +0200
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.4ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard/2/edit" for 127.0.0.1 at 2013-12-15 16:16:19 +0200
+Processing by DashboardController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered dashboard/edit.html.erb within layouts/application (80.1ms)
+Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:16:22 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:16:22 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (49.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (103.8ms)
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 116ms (Views: 59.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:24 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:17:25 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (48.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+Processing by HomeController#index as HTML
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:17:59 +0200
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-15 16:18:01 +0200
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:18:03 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:18:03 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (46.6ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138)
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:20:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 299ms (Views: 192.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:16 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:16 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:16 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:16 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:16 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:16 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:16 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:20:17 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (54.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (104.5ms)
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:21:02 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 11.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:02 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:02 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:02 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:02 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:02 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:21:03 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (51.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (93.8ms)
+
+
+Started POST "/searchbar" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+Processing by SearchbarController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "searchstring"=>""}
+  [1m[35mSong Load (0.5ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered searchbar/_create.html.erb (4.9ms)
+  Rendered searchbar/create.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:09 +0200
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:21:11 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (39.3ms)
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 123ms (Views: 66.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:25:25 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (48.6ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-15 16:25:27 +0200
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/searchbar" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+Processing by SearchbarController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "searchstring"=>""}
+  [1m[35mSong Load (0.5ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered searchbar/_create.html.erb (3.6ms)
+  Rendered searchbar/create.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:30 +0200
+
+
+Started GET "/dashboard/2" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 69ms (Views: 64.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:25:31 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+Processing by HomeController#index as HTML
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:19 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:20 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:20 +0200
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-15 16:28:23 +0200
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.4ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-12-15 16:28:23 +0200
+Processing by HomeController#index as HTML
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-15 16:28:25 +0200
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/searchbar" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+Processing by SearchbarController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "searchstring"=>""}
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered searchbar/_create.html.erb (3.6ms)
+  Rendered searchbar/create.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:26 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:27 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:27 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:27 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:27 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:27 +0200
+
+
+Started GET "/dashboard/2" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 12.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:29 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:28:32 +0200
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138)
+
+
+Started GET "/dashboard/5" for 127.0.0.1 at 2013-12-15 16:29:15 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered dashboard/show.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 283ms (Views: 182.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/searchbar" for 127.0.0.1 at 2013-12-15 16:29:39 +0200
+Processing by SearchbarController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "searchstring"=>""}
+  [1m[35mSong Load (0.5ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered searchbar/_create.html.erb (4.7ms)
+  Rendered searchbar/create.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:40 +0200
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:29:42 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (54.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (102.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+Processing by HomeController#index as HTML
+  [1m[35mSong Load (0.5ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:30:58 +0200
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-15 16:31:00 +0200
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.5ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-12-15 16:31:02 +0200
+Processing by HomeController#index as HTML
+  [1m[35mSong Load (0.6ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered home/index.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/searchbar" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+Processing by SearchbarController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "searchstring"=>""}
+  [1m[35mSong Load (0.5ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered searchbar/_create.html.erb (4.2ms)
+  Rendered searchbar/create.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:05 +0200
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:07 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:08 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:08 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:08 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:31:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (47.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:31:09 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:32:22 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (98.0ms)
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:32:22 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:32:22 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (46.5ms)
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:32:23 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (45.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (92.7ms)
+
+
+Started POST "/searchbar" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+Processing by SearchbarController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "searchstring"=>""}
+  [1m[35mSong Load (0.5ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered searchbar/_create.html.erb (6.1ms)
+  Rendered searchbar/create.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:25 +0200
+
+
+Started GET "/searchbar/1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+Processing by SearchbarController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered searchbar/show.html.erb within layouts/application (16.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 33ms (Views: 27.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:32:26 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (56.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (92.0ms)
+
+
+Started POST "/searchbar/save_comm" for 127.0.0.1 at 2013-12-15 16:32:30 +0200
+Processing by SearchbarController#save_comm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "comment"=>{"content"=>"fhdf"}, "commit"=>"Comment"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/searchbar_controller.rb:32:in `save_comm'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.7ms)
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:32:41 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (53.4ms)
+
+
+Started GET "/searchbar/1" for 127.0.0.1 at 2013-12-15 16:32:41 +0200
+Processing by SearchbarController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered searchbar/show.html.erb within layouts/application (48.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:32:41 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (48.6ms)
+
+
+Started GET "/searchbar/1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+Processing by SearchbarController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered searchbar/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 15.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:34:28 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (44.6ms)
+
+
+Started POST "/searchbar/save_comm" for 127.0.0.1 at 2013-12-15 16:34:31 +0200
+Processing by SearchbarController#save_comm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "comment"=>{"content"=>"dsdf"}, "song_id"=>"1", "commit"=>"Comment"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/searchbar_controller.rb:32:in `save_comm'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.5ms)
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:34:43 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (101.9ms)
+
+
+Started GET "/searchbar/1" for 127.0.0.1 at 2013-12-15 16:34:43 +0200
+Processing by SearchbarController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered searchbar/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:34:43 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (45.9ms)
+
+
+Started GET "/searchbar/1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+Processing by SearchbarController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered searchbar/show.html.erb within layouts/application (68.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 135ms (Views: 101.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:36:34 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (46.5ms)
+
+
+Started POST "/searchbar/save_comm" for 127.0.0.1 at 2013-12-15 16:36:36 +0200
+Processing by SearchbarController#save_comm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "comment"=>{"content"=>"dfg"}, "song_id"=>"1", "commit"=>"Comment"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/searchbar_controller.rb:32:in `save_comm'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/searchbar/" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+Processing by SearchbarController#index as HTML
+  [1m[35mSong Load (0.9ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered searchbar/index.html.erb within layouts/application (24.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 69ms (Views: 55.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:24 +0200
+
+
+Started GET "/searchbar/1" for 127.0.0.1 at 2013-12-15 16:37:27 +0200
+Processing by SearchbarController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered searchbar/show.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:37:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (96.1ms)
+
+
+Started POST "/searchbar/save_comm" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+Processing by SearchbarController#save_comm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "comment"=>{"content"=>"fdth"}, "song_id"=>"1", "commit"=>"Comment"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.4ms)[0m  INSERT INTO "comments" ("content", "created_at", "song_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["content", "fdth"], ["created_at", Sun, 15 Dec 2013 14:37:29 UTC +00:00], ["song_id", 1], ["updated_at", Sun, 15 Dec 2013 14:37:29 UTC +00:00], ["user_id", 1]]
+  [1m[36m (206.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/searchbar/1
+Completed 302 Found in 227ms (ActiveRecord: 216.2ms)
+
+
+Started GET "/searchbar/1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+Processing by SearchbarController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered searchbar/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:29 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:37:30 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (54.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (100.5ms)
+
+
+Started POST "/searchbar/save_comm" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+Processing by SearchbarController#save_comm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTmIMWZTa3c2NMIpiXciHAlZc1Em/hxhg6Y7QIEGqx4=", "comment"=>{"content"=>"sgdg"}, "song_id"=>"1", "commit"=>"Comment"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "comments" ("content", "created_at", "song_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["content", "sgdg"], ["created_at", Sun, 15 Dec 2013 14:37:33 UTC +00:00], ["song_id", 1], ["updated_at", Sun, 15 Dec 2013 14:37:33 UTC +00:00], ["user_id", 1]]
+  [1m[36m (212.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/searchbar/1
+Completed 302 Found in 220ms (ActiveRecord: 213.4ms)
+
+
+Started GET "/searchbar/1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+Processing by SearchbarController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered searchbar/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 19ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+
+Started GET "/uploads/1/1.mp3" for 127.0.0.1 at 2013-12-15 16:37:33 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/1/1.mp3"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (47.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-15 16:37:46 +0200
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 20ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-12-15 16:37:46 +0200
+Processing by HomeController#index as HTML
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-15 16:37:47 +0200
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 0.8ms)

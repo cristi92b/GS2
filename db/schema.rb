@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131214142456) do
+ActiveRecord::Schema.define(version: 20131215140336) do
+
+  create_table "comments", force: true do |t|
+    t.integer  "song_id"
+    t.integer  "user_id"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "songs", force: true do |t|
     t.string   "title"
