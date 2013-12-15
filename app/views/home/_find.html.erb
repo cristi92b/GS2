@@ -1,28 +1,4 @@
-<h1>Dashboard</h1>
-
-
-<hr>
-
-<%= link_to "Add song" ,  new_dashboard_path %>
-
-
-<hr>
-<div>
-	<%= form_tag("/dashboard/find", method: "get") do %>
-		<%= label_tag(:q, "Search for:") %>
-		<%= text_field_tag(:word) %>
-		<%= submit_tag "Find" %>
-	<% end %>
-
-
-</div>
-<hr>
-
-
-
-
-
-<table class="table table-hover">
+<table class="table table-hover"
 	<tr>
 		<td><b>
 			Title
@@ -94,7 +70,3 @@
 	</tr>
 <% end %>
 </table>
-
-
-
-
