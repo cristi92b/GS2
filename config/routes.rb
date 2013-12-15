@@ -1,6 +1,5 @@
 GS::Application.routes.draw do
 
-  get "about/index"
   get "dashboard/download"  
   get 'dashboard/find' => 'dashboard#find'
   get 'home/find' => 'home#find'

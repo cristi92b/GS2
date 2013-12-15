@@ -1,0 +1,53 @@
+<h4> Melodii ce contin textul: </h4> 
+<strong> <%=  @searchstring  %></strong>
+<table border="1">
+	<tr>
+		<td>
+			title
+		</td>
+		<td>
+			album
+		</td>
+		<td>
+			artist
+		</td>
+		<td>
+			genre
+		</td>
+		<td>
+			track
+		</td>
+		<td>
+			year
+		</td>
+		<td>
+			Play
+		</td>
+	</tr>
+<% @songs.each do |song| %>
+	<tr>
+		<td>
+			<%= song.title %>
+		</td>
+		<td>
+			<%= song.album %>
+		</td>
+		<td>
+			<%= song.artist %>
+		</td>
+		<td>
+			<%= song.genre %>
+		</td>
+		<td>
+			<%= song.track %>
+		</td>
+		<td>
+			<%= song.year %>
+		</td>
+		
+		<td>
+			<%= link_to "Play", dashboard_path(song.id) %>
+		</td>
+	</tr>
+<% end %>
+</table>
