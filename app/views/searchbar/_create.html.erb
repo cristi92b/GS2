@@ -1,27 +1,27 @@
 <h4> Melodii ce contin textul: </h4> 
 <strong> <%=  @searchstring  %></strong>
-<table border="1">
+<table class="table table-hover">
 	<tr>
-		<td>
-			title
+		<td><b>
+			Title</b>
 		</td>
-		<td>
-			album
+		<td><b>
+			Album</b>
 		</td>
-		<td>
-			artist
+		<td><b>
+			Artist</b>
 		</td>
-		<td>
-			genre
+		<td><b>
+			Genre</b>
 		</td>
-		<td>
-			track
+		<td><b>
+			Track</b>
 		</td>
-		<td>
-			year
+		<td><b>
+			Year</b>
 		</td>
-		<td>
-			Play
+		<td><b>
+			Play</b>
 		</td>
 	</tr>
 <% @songs.each do |song| %>
