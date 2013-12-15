@@ -20,17 +20,9 @@
 		<td>
 			year
 		</td>
-		<td>
-			Edit
-		</td>
+		
 		<td>
 			Play
-		</td>
-		<td>
-			Download
-		</td>
-		<td>
-			Remove
 		</td>
 	</tr>
 <% @songs.each do |song| %>
@@ -54,17 +46,7 @@
 			<%= song.year %>
 		</td>
 		<td>
-			<%= link_to "Edit", edit_dashboard_path(song.id) %>
-		</td>
-		<td>
 			<%= link_to "Play", dashboard_path(song.id) %>
-		</td>
-
-		<td>
-			<%= link_to "Download", "/dashboard/download?id=#{song.id}" %>
-		</td>
-		<td>
-			<%= link_to "Destroy", dashboard_path(song.id) , :method => :delete  %>
 		</td>
 	</tr>
 <% end %>
