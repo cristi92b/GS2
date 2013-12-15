@@ -4,7 +4,8 @@ class SearchbarController < ApplicationController
       @songs = Song.all
   end
   def show
-
+	@song = Song.find(params[:id])
+	@path = "/uploads/#{@song.user_id}/#{@song.id}.mp3"
   end
   def new
 

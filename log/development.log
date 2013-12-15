@@ -9613,3 +9613,247 @@ Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 15:45:29 +
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 15:45:29 +0200
+
+
+Started POST "/searchbar" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+Processing by SearchbarController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgtyyUizb7JV9OcvSYzm/qW5zr3JYcO1sLKq+FB051k=", "searchstring"=>""}
+  [1m[35mSong Load (0.7ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered searchbar/_create.html.erb (21.7ms)
+  Rendered searchbar/create.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 44ms (Views: 33.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:16 +0200
+
+
+Started GET "/dashboard/1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+Processing by DashboardController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 6ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.2.2/app/views/devise/shared/_links.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.2.2/app/views/devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 94ms (Views: 16.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:18 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/mediaelementplayer.min.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/searchbar.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/mediaelement_rails/mediaelementplayer.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/mediaelement_rails/index.css?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/mediaelement-and-player.min.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/mediaelement-and-player.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/searchbar.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+
+
+Started GET "/searchbar" for 127.0.0.1 at 2013-12-15 15:50:21 +0200
+Processing by SearchbarController#index as HTML
+  [1m[36mSong Load (0.7ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered searchbar/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/searchbar/5" for 127.0.0.1 at 2013-12-15 15:50:48 +0200
+Processing by SearchbarController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered searchbar/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.4ms)
