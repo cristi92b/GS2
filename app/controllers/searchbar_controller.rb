@@ -1,6 +1,7 @@
 class SearchbarController < ApplicationController
+  @searchstring
   def index
-	@songs=Song.all
+      @songs = Song.all
   end
   def show
 
@@ -9,7 +10,12 @@ class SearchbarController < ApplicationController
 
   end
   def create
-
+     if params[:searchstring].present?
+      @songs = Song.where("title like ?", "%#{params[:searchstring]}%")
+      @searchstring = params[:searchstring]
+    else
+      @songs = Song.all
+    end
   end
   def edit
 
