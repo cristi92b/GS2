@@ -1,0 +1,13 @@
+<h2>MP3</h2>
+<%= audio_tag("#{@path}", :controls => true) %>
+
+
+<script>
+$('audio').mediaelementplayer();
+</script>
+
+<%= form_for @comm , url: {action: "save_comm"} do |comm|  %>
+	<%= comm.text_field :content %>
+	<%= hidden_field_tag :song_id, @song.id %>
+	<%= comm.submit  "Comment" %>
+<% end %>

@@ -81,14 +81,12 @@
 </table>
 
 
-<audio id="player1" src="1.mp3" type="audio/mp3" controls="controls">
-</audio>
+<h2>MP3</h2>
+<audio id="player2" src="1.mp3" type="audio/mp3" controls="controls">		
+</audio>	
+
 <script>
-$('#player1').mediaelementplayer({
-    features: ['playpause','progress','duration','volume'],
-    audioWidth: 26,
-    audioHeight: 30
-}); 
+$('audio').mediaelementplayer();
 </script>
 
 </div>

@@ -9,6 +9,8 @@ class DashboardController < ApplicationController
 	@songs = Song.where(user_id: current_user.id)
   end
   def show
+	@song = Song.find(params[:id])
+	@path = "/uploads/#{@song.user_id}/#{@song.id}.mp3"
   end
   def new
 	@song = Song.new
