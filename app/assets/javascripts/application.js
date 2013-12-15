@@ -15,5 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap 
-//= require mediaelement_rails
+//= require mediaelement-and-player
+//= require jquery
 

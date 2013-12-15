@@ -15,6 +15,7 @@
 
 <table class="table table-hover">
 	<tr>
+<<<<<<< HEAD
 		<td><b>
 			Title
 		</b>
@@ -48,6 +49,30 @@
 		</td></td>
 		<td></td>
 		<td></td>
+=======
+		<td>
+			title
+		</td>
+		<td>
+			album
+		</td>
+		<td>
+			artist
+		</td>
+		<td>
+			genre
+		</td>
+		<td>
+			track
+		</td>
+		<td>
+			year
+		</td>
+		
+		<td>
+			Play
+		</td>
+>>>>>>> 24e63d58be533ac4d92d2b77b0a003fde2192ce7
 	</tr>
 <% @songs.each do |song| %>
 	<tr>
@@ -70,17 +95,7 @@
 			<%= song.year %>
 		</td>
 		<td>
-			<%= link_to "Edit", edit_dashboard_path(song.id) %>
-		</td>
-		<td>
 			<%= link_to "Play", dashboard_path(song.id) %>
-		</td>
-
-		<td>
-			<%= link_to "Download", "/dashboard/download?id=#{song.id}" %>
-		</td>
-		<td>
-			<%= link_to "Destroy", dashboard_path(song.id) , :method => :delete  %>
 		</td>
 	</tr>
 <% end %>
@@ -88,3 +103,77 @@
 
 
 
+<<<<<<< HEAD
+=======
+</div>
+
+<audio id="player1" src="1.mp3" type="audio/mp3" controls="controls">
+
+
+</audio>
+<!--<link rel="stylesheet" href="mediaelementplayer.min.css" />-->
+<!--<script src="mediaelement-and-player.min.js"></script>-->
+<script src="jquery.js"></script>
+<script>
+var player = new MediaElement('player1', {
+    // shows debug errors on screen
+    enablePluginDebug: false,
+    // remove or reorder to change plugin priority
+    plugins: ['flash'],
+    // specify to force MediaElement to use a particular video or audio type
+    type: '',
+    // path to Flash and Silverlight plugins
+    pluginPath: '/',
+    // name of flash file
+    flashName: 'flashmediaelement.swf',
+    // name of silverlight file
+    // silverlightName: 'silverlightmediaelement.xap',
+    // default if the <video width> is not specified
+    // defaultVideoWidth: 480,
+    // default if the <video height> is not specified    
+    // defaultVideoHeight: 270,
+    // overrides <video width>
+    features: ['playpause','progress','duration','volume'],
+
+    pluginWidth: 250,
+    // overrides <video height>      
+    pluginHeight: 20,
+    // rate in milliseconds for Flash and Silverlight to fire the timeupdate event
+    // larger number is less accurate, but less strain on plugin->JavaScript bridge
+    timerRate: 250,
+    // method that fires when the Flash or Silverlight object is ready
+    success: function (mediaElement, domObject) {
+         
+        // add event listener
+        mediaElement.addEventListener('timeupdate', function(e) {
+             
+            document.getElementById('current-time').innerHTML = mediaElement.currentTime;
+             
+        }, false);
+         
+        // call the play method
+        mediaElement.play();
+         
+    },
+    // fires when a problem is detected
+    error: function () {
+     
+    }
+});
+
+
+
+player.pause();
+player.setSrc('1.mp3');
+player.play();
+</script>
+<script>
+$('audio').mediaelementplayer({
+    features: ['playpause','progress','duration','volume'],
+    audioWidth: 26,
+    audioHeight: 30
+}); 
+</script>
+
+
+>>>>>>> 24e63d58be533ac4d92d2b77b0a003fde2192ce7
