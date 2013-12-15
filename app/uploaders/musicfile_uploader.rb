@@ -34,7 +34,7 @@ class MusicfileUploader < CarrierWave::Uploader::Base
   #end
   def store_dir
   	#"#{Rails.root}/uploads/#{@userid}/"
-    "#{Rails.root}/uploads/#{model.user_id}"
+    "#{Rails.root}/public/uploads/#{model.user_id}"
     #"uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{Song.id}"
   end
 
